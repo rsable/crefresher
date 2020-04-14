@@ -1,0 +1,5 @@
+- expression can only be an int. It can’t be float or string.
+    - Then how does the comparison work when I want to check if a string is present ?
+    - If you enter a character, a character is still treated as an integer by C and therefore can be tested against the switch statements. : Bouncer
+            printf('%d',a)
+- 

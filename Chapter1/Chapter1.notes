@@ -1,0 +1,50 @@
+- In C programming language, printf() function is used to print the “character, string, float, integer, octal and hexadecimal values” onto the output screen.
+    - We use printf() function with %d format specifier to display the value of an integer variable.
+    - Similarly %c is used to display character, %f for float variable, %s for string variable, %lf for double and %x for hexadecimal variable.
+    - To generate a newline,we use “\n” in C printf() statement.
+
+- scanf("%d", &b);
+    - The program will read in an integer value that the user enters on the keyboard (%d is for integers, as is printf, so b must be declared as an int) and place that value into b.
+    - The scanf function uses the same placeholders as printf:
+    - int uses %d
+    - float uses %f
+    - char uses %c
+    - character strings (discussed later) use %s
+You must put & in front of the variable used in scanf. The reason why will become clear once you learn about pointers. It is easy to forget the & sign, and when you forget it your program will almost always crash when you run it.
+
+-----------------------------------------------------------8<-----------------------------------------------------------
+
+In C, we have 32 keywords, which have their predefined meaning and cannot be used as a variable name. These words are also known as “reserved words”. It is good practice to avoid using these keywords as variable name. These are –
+
+C-keywords
+
+Basics usage of these keywords –
+
+if, else, switch, case, default – Used for decision control programming structure.
+
+
+break – Used with any loop OR switch case.
+
+int, float, char, double, long – These are the data types and used during variable declaration.
+
+for, while, do – types of loop structures in C.
+
+void – One of the return type.
+
+goto – Used for redirecting the flow of execution.
+
+auto, signed, const, extern, register, unsigned – defines a variable.
+
+return – This keyword is used for returning a value.
+
+continue – It is generally used with for, while and dowhile loops, when compiler encounters this statement it performs the next iteration of the loop, skipping rest of the statements of current iteration.
+
+enum – Set of constants.
+
+sizeof – It is used to know the size.
+
+struct, typedef  – Both of these keywords used in structures (Grouping of data types in a single record).
+
+union – It is a collection of variables, which shares the same memory location and memory storage.
+
+volatile 
