@@ -1,0 +1,29 @@
+1) Associativity is only used when there are two or more operators of same precedence.
+The point to note is associativity doesn’t define the order in which operands of a single operator are evaluated. For example, consider the following program, associativity of the + operator is left to right, but it doesn’t mean f1() is always called before f2(). The output of the following program is in-fact compiler dependent.
+
+2) All operators with the same precedence have same associativity
+This is necessary, otherwise, there won’t be any way for the compiler to decide evaluation order of expressions which have two operators of same precedence and different associativity. For example + and – have the same associativity.
+
+3) Precedence and associativity of postfix ++ and prefix ++ are different
+Precedence of postfix ++ is more than prefix ++, their associativity is also different. Associativity of postfix ++ is left to right and associativity of prefix ++ is right to left.
+
+4) Comma has the least precedence among all operators and should be used carefully
+
+5) There is no chaining of comparison operators in C
+In Python, expression like “c > b > a” is treated as “c > b and b > a”, but this type of chaining doesn’t happen in C. For example consider the  following program. The output of following program is “FALSE”.
+#include <stdio.h> 
+int main() 
+{ 
+    int a = 10, b = 20, c = 30; 
+  
+    // (c > b > a) is treated as ((c  > b) > a), associativity of '>' 
+    // is left to right. Therefore the value becomes ((30 > 20) > 10) 
+    // which becomes (1 > 20) 
+    if (c > b > a) 
+        printf("TRUE"); 
+    else
+        printf("FALSE"); 
+    return 0; 
+}
+
+https://www.geeksforgeeks.org/operator-precedence-and-associativity-in-c/
